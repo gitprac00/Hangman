@@ -23,7 +23,7 @@ startButton.addEventListener("click", () => {
     }, startTimeout * 1000);
 });
 
-clickableBox.addEventListener("click", () => {
+clickableBox.addEventListener("keypress", () => {
     if(!isStarted) {        
         clearTimeout(timeoutId)
         clickableBox.style.pointerEvents = "none";
