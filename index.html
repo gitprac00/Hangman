@@ -3,9 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reaction Time Checker</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            background-color: #fff;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            background: #000;
+            
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        .clickableBox{
+            width: 50vw;
+            height: 50vh;
+            background-color: gray;
+            cursor: disabled;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+
+        }
+        .startButton{
+            padding: 20px;
+            border-radius: 10px;
+            background-color: greenyellow;
+            cursor: pointer;
+            border: none;
+        }
+        .displayText{
+            width: 50vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            color: #212121;
+            font-weight: bold;
+            background-color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .startButton:hover{
+            background-color:green;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
-    <script src="script.js"></script>
+    <div class = "container" >
+        <div class="clickableBox">
+            Click here when it turns green
+        </div>
+        <button class="startButton">Start</button>
+        <div class="displayText"></div>
+    </div>
+
+<script src="index.js"></script>
 </body>
 </html>
